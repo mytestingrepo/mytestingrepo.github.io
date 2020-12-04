@@ -1,0 +1,193 @@
+/* 1366 common css */
+html {
+    /* 10px: easy to use with REM */
+    /* Do not change this value in any media query */
+    /* make use of CSS3 variables where required */
+    font-size: 62.5%;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	box-sizing:border-box;
+}
+
+//slick fix
+.slick-track {
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    .slick-slide {
+        outline: none;
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.slick-arrow {
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    &:focus {
+        &::after {
+            filter: brightness(100) invert(1);
+        }
+    }
+}
+
+.slick-dots {
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+    li {
+        button {
+            outline: none;
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+            }
+            &.slick-active {
+                outline: none;
+                &:hover,
+                &:active,
+                &:focus {
+                    outline: none;
+                }
+                button {
+                    outline: none;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+        &:first-child:last-child {
+            display: none;
+        }
+    }
+}
+
+
+//custom css
+
+header {
+	width: 100%;
+	position: relative;
+	display: block;
+
+	img {
+		width: 100%;
+		display: block;
+	}
+}
+
+.carousel-Slider {
+	display: block;
+	width: 100%;
+	position: relative;
+
+	.slick-dots {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%);
+        color: transparent;
+        display: flex;
+
+        &:hover, &:active, &:focus {
+            outline: none;
+        }
+
+        li {
+            button {
+                color: transparent;
+                width: 1.1rem;
+                height: 1.1rem;
+                background: transparent;
+                border-radius: .7rem;
+                box-shadow: none;
+                margin: 0 .45rem;
+                border: 1px solid #fff;
+                padding: 0;
+            }
+
+            &.slick-active {
+
+                outline: none;
+                &:hover, &:active, &:focus {
+                    outline: none;
+                }
+
+                button {
+                    background-color: #fff;
+                    outline: none;
+                    &:hover, &:active, &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.main-content {
+	width: 100%;
+	position: relative;
+	display: block;
+}
+
+.fullwidth {
+	width: 100%;
+}
+
+.block {
+	display: block;
+}
+
+.flexed {
+	display: flex;
+	position: relative;
+
+	&.spaced {
+		justify-content: space-between;
+	}
+
+	&.centered {
+		justify-content: center;
+	}
+
+	&.around {
+		justify-content: space-around;
+	}
+}
+
+.products {
+	padding: 0 px2vw(105) px2vw(70) px2vw(105);
+
+	img {
+		border: 1px solid #dedede;
+		width: px2vw(274);
+
+		&:hover {
+			border: 1px solid #5590e5;
+			box-shadow: 0 0 2px 2px rgba(#000, 0.1);
+		}
+	}
+}
+
+
