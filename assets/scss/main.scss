@@ -11,6 +11,35 @@ html {
 	box-sizing:border-box;
 }
 
+@keyframes come-in {
+    from {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(5rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 //slick fix
 .slick-track {
     outline: none;
@@ -200,4 +229,35 @@ header {
 
 .final {
 	padding: px2vw(85) px2vw(110); 
+
+	img:hover {
+		transform: scale(1.05);
+		transition: transform .2s;
+	}
 }
+
+
+.come-in {
+    animation: come-in 0.9s ease-in-out;
+    &.c_r {
+        animation: come-in 1.2s ease-out;
+        // animation-delay: 2s;
+    }
+    &.c_r_mob {
+        animation: come-in 1.5s ease-out;
+        // animation-delay: 2s;
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.9s ease-in-out;
+}
+
+.slide-up {
+    animation: slide-up 0.9s ease-in-out;
+}
+
+.passive {
+    opacity: 0;
+}
+

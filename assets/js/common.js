@@ -1,6 +1,115 @@
 !function ($) {
     'use strict';
 
+    this.addEventListener('scroll', function () {
+        var winTop = this.document.documentElement.scrollTop || this.document.body.scrollTop,
+            $allCont = $('.p_anim'),
+            $allFade = $('.p_fade'),
+            $allSlide = $('.p_slide'),
+            // $wrapper = $('.wrapper'),
+            lastScrollTop = 0;
+
+        //below code for continuous come-in fade-in and slide-up animation on scroll
+
+        $allCont.each(function (i, el) {
+            var el = $(el);
+
+            if (winTop >= lastScrollTop) {
+                if (el.hasClass('c_r')) {
+                    if (winTop >= (el.offset().top - window.innerHeight + 250)) {
+                        setTimeout(function () {
+                            el.removeClass("passive").addClass("come-in");
+                        }, 10);
+                    }
+                } else if (el.hasClass('c_r_mob')) {
+                    if (winTop >= (el.offset().top - window.innerHeight + 50)) {
+                        setTimeout(function () {
+                            el.removeClass("passive").addClass("come-in");
+                        }, 10);
+                    }
+                } else {
+                    if (winTop >= (el.offset().top - window.innerHeight - 55)) {
+                            el.removeClass("passive").addClass("come-in");
+                    }
+                    // else {
+                    //     el.removeClass("come-in").addClass("passive");
+                    // }
+                }
+            } else {
+                if (winTop >= (el.offset().top - window.innerHeight)) {
+                    el.removeClass("passive").addClass("come-in");
+                }
+                // else {
+                //     el.removeClass("come-in").addClass("passive");
+                // }
+            }
+
+            if (
+                el.prop('id') === 'process' &&
+                el.hasClass('come-in') &&
+                !el.hasClass('animated')
+            ) {
+                el.addClass('animated')
+                    .find('.progress_bar_info').each(function (i) {
+                        var a = this;
+
+                        setTimeout(function () {
+                            $(a).addClass('active');
+                        }, i * 1000);
+                    });
+            }
+        });
+
+        $allFade.each(function (i, el) {
+            var el = $(el);
+
+            if (winTop >= lastScrollTop) {
+
+                if (winTop >= (el.offset().top - window.innerHeight - 55)) {
+                    el.removeClass("passive").addClass("fade-in");
+                }
+                // else {
+                //     el.removeClass("fade-in").addClass("passive");
+                // }
+
+            } else {
+                if (winTop >= (el.offset().top - window.innerHeight)) {
+                    el.removeClass("passive").addClass("fade-in");
+                }
+                // else {
+                //     el.removeClass("fade-in").addClass("passive");
+                // }
+            }
+        });
+
+        $allSlide.each(function (i, el) {
+            var el = $(el);
+
+            if (winTop >= lastScrollTop) {
+
+                if (winTop >= (el.offset().top - window.innerHeight - 25)) {
+                    el.removeClass("passive").addClass("slide-up");
+                }
+                // else {
+                //     el.removeClass("slide-up").addClass("passive");
+                // }
+
+            } else {
+                if (winTop >= (el.offset().top - window.innerHeight)) {
+                    el.removeClass("passive").addClass("slide-up");
+                }
+                // else {
+                //     el.removeClass("slide-up").addClass("passive");
+                // }
+            }
+        });
+
+        lastScrollTop = winTop;
+
+    }, {
+        passive: true
+    });
+
     // write code here
     $(document).ready(function(){
     	
