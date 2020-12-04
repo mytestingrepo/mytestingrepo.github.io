@@ -255,14 +255,13 @@ header {
 
 .final {
 	padding: px2vw(85) px2vw(110);
-	transform: scale(1);
-	transition: transform .7s ease-in-out;
 
 	img {
 		cursor: pointer;
+		transition: transform .2s ease-in-out;
+
 		&:hover {
-			transform: scale(1.05);
-			transition: transform .2s ease-in-out;
+			transform: scale(1.08);
 		}
 	}
 }
