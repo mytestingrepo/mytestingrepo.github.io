@@ -122,7 +122,6 @@
             $header.removeClass('scrolled').removeClass('hidden');
         } else if (wTop > oldScroll) {
             $header.addClass('scrolled').removeClass('hidden');
-            console.log("acrolled");
         } else if (wTop < oldScroll) {
             $header.addClass('hidden').removeClass('scrolled');
         }
@@ -162,7 +161,7 @@
 	function makeTimer() {
 
 	//		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
-		var endTime = new Date("05 December 2020 9:56:00 GMT+01:00");			
+		var endTime = new Date("05 December 2021 9:56:00 GMT+01:00");			
 			endTime = (Date.parse(endTime) / 1000);
 
 			var now = new Date();
@@ -185,7 +184,22 @@
 			$("#seconds").html(seconds + "<span>Seconds</span>");		
 
 	}
-
 	setInterval(function() { makeTimer(); }, 1000);
+
+    document.addEventListener('scroll', function() {
+       var hT = $('.scroll-to').offset().top,
+           hH = $('.scroll-to').outerHeight(),
+           wH = $(window).height(),
+           wS = $(this).scrollTop();
+       if (wS > (hT+hH-wH-300)){
+            $('.chooseus').addClass('reached');
+            setTimeout(function(){
+                $('.odometer_one').html('100');
+                $('.odometer_two').html('1000000');
+                $('.odometer_three').html('10000');
+                $('.odometer_four').html('1000000');
+            }, 300);
+       }
+    });
 
 }.call(window, window.jQuery);
