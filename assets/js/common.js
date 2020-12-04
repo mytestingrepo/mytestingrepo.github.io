@@ -14,7 +14,18 @@
 	        slidesToScroll: 1,
 	        autoplaySpeed: 2000
 	    });
-	    
+
+	    $('.clientsays').slick({
+	        dots: false,
+	        infinite: true,
+	        speed: 300,
+	        slidesToShow: 1,
+	        arrows: false,
+	        autoplay: true,
+	        slidesToScroll: 1,
+	        autoplaySpeed: 2000
+	    });
+
 	});
 
 }.call(window, window.jQuery);
