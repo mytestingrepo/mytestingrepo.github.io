@@ -118,11 +118,32 @@ header {
 	position: relative;
 	display: block;
 
-	img {
-		width: 100%;
-		display: block;
+	&.scrolled {
+
+		.fullheader {
+		    animation: slide-up 0.2s ease-in-out;
+		}
+		& + .main-content {
+			margin-top: px2vw(55);
+		}
+
+		.scaledheader {
+			transform: translateY(0);	
+			transition: transform 0.3s;
+		}
+
 	}
 }
+
+.scaledheader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transform: translateY(-100px);	
+	transition: transform 0.3s;
+}
+
 
 .carousel-Slider {
 	display: block;
@@ -188,6 +209,10 @@ header {
 	display: block;
 }
 
+.nopad {
+	padding: 0;
+}
+
 .flexed {
 	display: flex;
 	position: relative;
@@ -210,6 +235,7 @@ header {
 
 	img {
 		border: 1px solid #dedede;
+		cursor: pointer;
 		width: px2vw(274);
 
 		&:hover {
@@ -228,11 +254,16 @@ header {
 }
 
 .final {
-	padding: px2vw(85) px2vw(110); 
+	padding: px2vw(85) px2vw(110);
+	transform: scale(1);
+	transition: transform .7s ease-in-out;
 
-	img:hover {
-		transform: scale(1.05);
-		transition: transform .2s;
+	img {
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.05);
+			transition: transform .2s ease-in-out;
+		}
 	}
 }
 

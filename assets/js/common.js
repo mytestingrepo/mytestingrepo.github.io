@@ -110,9 +110,31 @@
         passive: true
     });
 
+
+    document.addEventListener('scroll', function () {
+        var wTop = document.documentElement.scrollTop || document.body.scrollTop,
+            headerHideHeight = 200,
+            $header = $('header'),
+            oldScroll = 0;
+
+        //up
+        if (wTop <= headerHideHeight - 150) {
+            $header.removeClass('scrolled').removeClass('hidden');
+        } else if (wTop > oldScroll) {
+            $header.addClass('scrolled').removeClass('hidden');
+            console.log("acrolled");
+        } else if (wTop < oldScroll) {
+            $header.addClass('hidden').removeClass('scrolled');
+        }
+        oldScroll = wTop;
+    }, { passive: true });
+
     // write code here
     $(document).ready(function(){
-    	
+
+
+		$("html, body").animate({ scrollTop: 0 }, 600);
+		    	
 	    $('.carousel-Slider').slick({
 	        dots: true,
 	        infinite: true,
