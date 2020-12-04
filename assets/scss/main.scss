@@ -292,3 +292,44 @@ header {
     opacity: 0;
 }
 
+.startingat {
+	position: relative;
+
+	#timer {
+		position: absolute;
+		left: px2vw(1030);
+		top: px2vw(100);
+	    display: flex;
+	    line-height: px2vw(45);
+	    padding: 0;
+	    font-size: px2vw(30);
+	    font-family: 'Arial';
+	    font-weight: 500;
+	    text-align: center;
+
+	    span {
+		  display: block;
+		  font-size: px2vw(14);
+		  color: white;
+		  font-family: 'Arial';
+		  font-weight: 100;
+		  text-align: center;
+		}
+
+		#hours {
+		  font-size: px2vw(65);
+		  color: #fff;
+		  margin-right: px2vw(10);
+		}
+		#minutes {
+		  font-size: px2vw(65);
+		  margin-right: px2vw(10);
+		  color: #fff;
+		}
+		#seconds {
+		  font-size: px2vw(65);
+		  color: #fff;
+		}
+	}
+}
+
