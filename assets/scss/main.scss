@@ -52,7 +52,7 @@ nav {
 	align-items: center;
 	position: relative;
 	background-color: #31353e;
-	padding: px2vw(25) 0;
+	padding: px2vw(2) 0;
 
 	label {
 		display: none;
@@ -170,7 +170,7 @@ nav {
 .mainImg {
 	order: 2;
 	position: relative;
-	width: px2vw(500);
+	width: px2vw(480);
 
 	img {
 		display: block;
@@ -227,7 +227,8 @@ nav {
 		padding: 0;
 		margin-bottom: px2vw(20);
 		font-weight: 900;
-		line-height: .9;
+		// line-height: .9;
+		line-height: 1.1;
 	}
 
 	h4 {
@@ -256,7 +257,7 @@ nav {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		width: px2vw(295);
+		width: px2vw(300);
 		margin-bottom: px2vw(65);
 
 		h4 {
@@ -316,7 +317,12 @@ nav {
 
 .actions {
 	position: relative;
-	display: flex;
+	// display: flex;
+	display: block;
+
+	h4 {
+		margin-bottom: 3%;
+	}
 
 
 	.price {
@@ -348,7 +354,7 @@ nav {
 		box-shadow: none;
 		font-weight: 500;
 		cursor: pointer;
-		margin: 0 px2vw(5);
+		margin: 0;
 
 		&:hover, &:active {
 			border: 0;
@@ -392,26 +398,32 @@ nav {
 		display: flex;
 		position: relative;
 		width: 100%;
+		flex-wrap: wrap;
+		overflow-x: auto;
 		padding: 0 px2vw(50);
 		list-style: none;
 		list-style-type: none;
 		border-top: 1px solid #cfcfcf;
 		border-bottom: 1px solid #cfcfcf;
+		justify-content: space-around;
 
 		li {
-			width: px2vw(320);
-			height: px2vw(400);
-			padding: px2vw(50);
+			width: px2vw(420);
+			// height: px2vw(400);
+			height: auto;
+			padding: 0;
+			// padding: px2vw(50);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			position: relative;
-			border-left: 1px solid #cfcfcf;
+			border: 1px solid #cfcfcf;
+			// margin-bottom: 1%;
 
-			&:last-child {
-				border-right: 1px solid #cfcfcf;
-			}
+			// &:last-child {
+			// 	border-right: 1px solid #cfcfcf;
+			// }
 
 			&::before {
 				content: '';
@@ -428,7 +440,7 @@ nav {
 			img {
 				width: 100%;
 				display: block;
-				margin-bottom: px2vw(15);
+				// margin-bottom: px2vw(15);
 			}
 
 			h4 {
@@ -486,15 +498,15 @@ nav {
 			}
 
 
-			&:hover {
-				&::before {
-					display: block;
-				}
+			// &:hover {
+			// 	&::before {
+			// 		display: block;
+			// 	}
 
-				button {
-					display: block;
-				}
-			}
+			// 	button {
+			// 		display: block;
+			// 	}
+			// }
 
 		}
 	}
@@ -635,4 +647,8 @@ footer {
 			text-align: center;
 		}
 	}
+}
+
+a {
+	text-decoration: none;
 }

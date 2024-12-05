@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "start": "http-server -o"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }
