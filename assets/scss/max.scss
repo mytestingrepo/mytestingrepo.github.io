@@ -221,8 +221,8 @@
 	.actions {
 		width: 100%;
 		position: relative;
-		display: flex;
-		flex-wrap: wrap;
+		display: block;
+		// flex-wrap: wrap;
 
 		h4 {
 			margin-bottom: 1%;
@@ -422,5 +422,9 @@
 				font-size: 1.4rem;
 			}
 		}
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
