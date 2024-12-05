@@ -265,6 +265,7 @@
 			margin: 0;
 			width: auto;
 			display: flex;
+			flex-wrap: nowrap;
 			flex: auto;
 			overflow-x: auto;
 			justify-content: flex-start;
@@ -277,9 +278,9 @@
 				// width: 20rem;
 				// min-width: 20rem;
 				// max-width: 20rem;
-				width: 100%;
-				min-width: 100%;
-				max-width: 100%;
+				width: 92%;
+				min-width: 92%;
+				max-width: 92%;
 				height: auto;
 				padding: 1rem;
 				display: flex;
