@@ -242,6 +242,17 @@
 		}
 	}
 
+	.h-slider {
+		margin: 0;
+		display: flex;
+		position: relative;
+		width: 100%;
+		padding: 3% 0;
+		justify-content: center;
+		border-top: 1px solid #cfcfcf;
+		border-bottom: 1px solid #cfcfcf;
+	}
+
 	.related {
 		display: flex;
 		position: relative;
