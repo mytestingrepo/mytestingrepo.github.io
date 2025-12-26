@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Koduvayur Ratholsavam 2025</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/kdricon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="assets/js/lib/angular.js"></script>
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="testApp" ng-controller="testController">
+    <header>
+        <div class="logo">
+            <img src="assets/images/kdrlogo.png">
+        </div>
+        <!-- <div id="cart" data-count="0">Cart ({{itemCount}})</div> -->
+    </header>
+    <nav>
+        <!-- <input type="checkbox" id="toggleMenu">
+        <label for="toggleMenu"></label>
+        <ul class="menu">
+            <li class="dropdown" ng-click="activeButton($event)">
+                Menu1
+                <ul>
+                    <li>SubMenu1</li>
+                    <li>SubMenu2</li>
+                    <li>SubMenu3</li>
+                    <li>SubMenu4</li>
+                </ul>
+            </li>
+            <li>Menu2</li>
+            <li class="dropdown" ng-click="activeButton($event)">
+                Menu3
+                <ul>
+                    <li>SubMenu1</li>
+                    <li>SubMenu2</li>
+                    <li>SubMenu3</li>
+                    <li>SubMenu4</li>
+                </ul>
+            </li>
+            <li>Menu4</li>
+        </ul> -->
+    </nav>
+    <div class="product-container">
+        <aside class="images">
+            <div class="mainImg">
+                <img src="assets/images/1.jpg">
+            </div>
+            <div class="thumbs">
+                <img class="active" src="assets/images/1.jpg" ng-click="imageSwitch($event)">
+                <img src="assets/images/10.jpg" ng-click="imageSwitch($event)">
+                <img src="assets/images/18.jpg" ng-click="imageSwitch($event)">
+                <!-- <img src="assets/images/4.jpg" ng-click="imageSwitch($event)"> -->
+            </div>
+        </aside>
+        <section class="info main-info">
+            <h1>Koduvayur Ratholsavam</h1>
+            <h4>28 December 2025 - 06 January 2026</h4>
+            <p> With the blessings of Lord Sree Visalakshy Sametha Sree Viswanatha Swamy, historical and famous Ratholsavam of our Agraharam will be held on 2025 January 3, 4 (Saturday-Sunday).
+                We heartily invite you all to be part of these eventful days, experience this extravaganza attain the blessings of Sree Visalakshy Sametha Sree Viswanatha Swamy.
+            </p>
+            <!-- <div class="size">
+                <h4>Select Size</h4>
+                <label>
+                    <input type="radio" name="size" checked="checked"><span>6</span>
+                </label>
+                <label>
+                    <input type="radio" name="size"><span>7</span>
+                </label>
+                <label>
+                    <input type="radio" name="size"><span>8</span>
+                </label>
+                <label>
+                    <input type="radio" name="size"><span>9</span>
+                </label>
+                <label>
+                    <input type="radio" name="size"><span>10</span>
+                </label>
+                <label>
+                    <input type="radio" name="size"><span>11</span>
+                </label>
+            </div> -->
+            <div class="actions">
+                <!-- <p class="price" data-base-price="999.99" data-base-size="6" data-mul="50">$ {{itemPrice}}</p> -->
+                <h4>Live Streaming On:</h4>
+                <a target="blank" href="https://www.youtube.com/@koduvayurratholsavam">
+                    <button id="buy">OUR YOUTUBE CHANNEL</button>
+                </a>
+                <!-- <button id="addToCart" ng-click="itemCount=itemCount+1;">Add to Cart</button> -->
+            </div>
+        </section>
+    </div>
+    <section class="related">
+        <h4>Main Events</h4>
+        <div class="h-slider">
+            <ul>
+                <li>
+                    <img src="assets/images/10.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/16.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/17.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/18.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/20.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/21.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/30.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/32.jpg">
+                </li>
+                
+                <li>
+                    <img src="assets/images/33.jpg">
+                </li>
+                
+                <!-- <li> -->
+                    <!-- <img src="assets/images/e11.jpg"> -->
+                    <!-- <h4>Shoe FourX</h4>
+                    <h5>$499.99</h5>
+                    <button>Buy Now</button> -->
+                <!-- </li> -->
+            </ul>
+        </div>
+    </section>
+    <section class="related">
+        <h4>Daily Schedule</h4>
+        <div class="h-slider">
+            <ul>
+                <li>
+                    <img src="assets/images/7.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/8.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/9.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/14.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/19.jpg">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="related">
+        <h4>Cultural Events</h4>
+        <div class="h-slider">
+            <ul>
+                <li>
+                    <img src="assets/images/24.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/25.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/26.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/27.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/28.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/29.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/31.jpg">
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <section class="related">
+        <h4>Our Sponsors</h4>
+        <div class="h-slider">
+            <ul>
+                <li>
+                    <img src="assets/images/6.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/35.jpg">
+                </li>
+                <li>
+                    <img src="assets/images/36.jpg">
+                </li>
+                
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <!-- <section class="links">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>History</li>
+                    <li>Our Team</li>
+                    <li>Contact Us</li>
+                    <li>Terms</li>
+                    <li>Legal</li>
+                    <li>Privacy</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Account</h4>
+                <ul>
+                    <li>Dashboard</li>
+                    <li>My Orders</li>
+                    <li>Edit Profile</li>
+                    <li>Change Password</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tools</h4>
+                <ul>
+                    <li>Sales Flyer</li>
+                    <li>Create Catalog</li>
+                    <li>Create Flyer</li>
+                    <li>Virtual Sample</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Newsletter</h4>
+                <div>
+                    <input type="text" placeholder="Enter email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </section> -->
+        <section class="trademark">
+            <div>&copy; Koduvayur Ratholsavam 2025</div>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>
